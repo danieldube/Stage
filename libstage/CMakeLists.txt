@@ -50,7 +50,7 @@ add_library(stage SHARED ${stageSrcs})
 
 target_link_libraries( stage  
            ${LTDL_LIB}
-#		       ${OPENGL_LIBRARIES}   # is it safe to remove these permanently?
+		       ${OPENGL_LIBRARIES}   # is it safe to remove these permanently? No, I don't know why, but without the GL libraries at this place, the plugins from examples/ctrl do not compile on my machine, although they have the GL libraries in their dependencies.
 #  				 ${FLTK_LIBS2}
 )
 
